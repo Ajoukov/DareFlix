@@ -1,32 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DareFlix Lobby</title>
-    <link rel="stylesheet" href="dareflix-styles.css">
-</head>
-<body onload="bodyOnload()" class="body">
-    <script src="dareflix-scripts.js"></script>
-    <script src="lobbies.json"></script>
-    <h2>DareFlix Lobby</h2>
-
-    <div id="lobby">
-        <div class="question" title="The lobby ID is provided by the host user">?</div>
-        <label class="label" for="lobbyId">Enter DareFlix Lobby ID:</label>
-        <input class="input" style="margin-top: 10px" type="text" id="lobbyId" required>
-        <button class="button" type="button" onclick="enterLobby()">Enter Game Lobby</button>
-        <div id="invalidLobby" style="display:none;">Invalid lobby</div>
-    </div>
-    <div id="dares" style="display:none;">
-        <p class="daresEnter" for="textInput">Enter your dares:</p>
-        <!-- <input class="label" type="text" id="textInput" name="textInput" required> -->
-        <div id="daresDiv">
-            
-        </div>
-        <button class="button" style="display:inline;" type="button" onclick="submitDares()">Submit</button>
-        <button class="button" style="display:inline;" type="button" onclick="addDareLine()">Add</button>
-    </div>
-
+<html>
+<body>
+    <a href="lobby.html">Go to Lobby</a>
+    <a href="users.html">Go to Users</a>
 </body>
 </html>
