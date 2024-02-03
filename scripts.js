@@ -98,19 +98,15 @@ function invalidLobby() {
 function autocompleteMovies() {
     const input = document.getElementById("movieInput");
     const iconsContainer = document.getElementById("icons-container");
-    // Clear previous icons
-    iconsContainer.innerHTML = '';
-    // Get input value
+    iconsContainer.innerHTML = "";
     const inputValue = input.value.toLowerCase();
-    // Filter movies based on input
-    const filteredMovies = movieData.filter(movie => movie.toLowerCase().includes(inputValue));
-    // Display autocomplete suggestions
+    const filteredMovies = movieData.filter(movie => movie["Name"].toLowerCase().includes(inputValue));
     filteredMovies.forEach(movie => {
         const suggestion = document.createElement("div");
-        suggestion.textContent = movie;
+        suggestion.textContent = movie["Name"];
         suggestion.addEventListener("click", () => {
-            input.value = movie;
-            iconsContainer.innerHTML = '';
+            input.value = movie["Name"];
+            iconsContainer.innerHTML = "";
         });
         iconsContainer.appendChild(suggestion);
     });
@@ -125,3 +121,4 @@ function handleSpace(event) {
         iconsContainer.appendChild(icon);
     }
 }
+

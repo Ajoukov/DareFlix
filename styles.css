@@ -7,10 +7,14 @@
     display: inline;
     margin-bottom: 5px;
 }
+h2 {
+    text-align: center;
+}
 .input {
+    font-size: 20px;
     border-radius: 10px;
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
 }
@@ -51,6 +55,7 @@
 .dareText {
     width: calc(100% - 140px);
     padding: 10px;
+    font-size: 20px;
     border: 1px solid black;
     margin: 0px;
     border-radius: 10px;
@@ -85,14 +90,41 @@
 }
 
 #autocomplete-container {
-    max-width: 600px;
-    margin: 0 auto;
+/*    max-width: 600px;
+    margin: 0 auto;*/
+    margin-left:10%;
+    font-size: 20px;
 }
 
 #icons-container {
-    display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-left: 155px;
+    width:70%;
+}
+
+#icons-container div {
+    background-color:#aba;
+    padding:10px;
+}
+
+#icons-container div:hover, #icons-container div:nth-child(2n):hover {
+    background-color:#676;
+    cursor:pointer;
+}
+
+#icons-container div:nth-child(2n) {
+    background-color:#9a9;
+}
+
+#movieInput {
+    width:68%;
+    font-size: 20px;
+    padding:10px;
+}
+
+#autocomplete-container label {
+    width:150px;
+    display:inline-block;
 }
 
 .icon {

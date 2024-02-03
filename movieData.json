@@ -1,8 +1,17 @@
 let movieData = [
-    "The Shawshank Redemption",
-    "The Godfather",
-    "The Dark Knight",
-    "Pulp Fiction",
-    "Schindler's List",
-    // Add more movies as needed
+	{
+		"Name":"The Shawshank Redemption"
+	},
+	{
+		"Name":"The Godfather"
+	},
+	{
+		"Name":"The Dark Knight"
+	},
+	{
+		"Name":"Pulp Fiction"
+	},
+	{
+		"Name":"Schindler's List"
+	}
 ];
