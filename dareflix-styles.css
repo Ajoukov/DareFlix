@@ -1,18 +1,18 @@
-body {
+.body {
     font-family: Arial, sans-serif;
     padding: 20px;
 }
-label {
-    display: block;
+.label {
+    display: inline;
     margin-bottom: 5px;
 }
-input {
+.input {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     box-sizing: border-box;
 }
-button {
+.button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
@@ -20,6 +20,19 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-button:hover {
+.button:hover {
     background-color: #45a049;
+}
+
+.question {
+    display:inline;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 1px 6px;
+    margin: 10px;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    vertical-align: center;
+    user-select: none;
 }

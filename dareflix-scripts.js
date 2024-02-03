@@ -1,30 +1,46 @@
-function enterGame() {
-    var playerId = document.getElementById("playerId").value;
-    // You can perform additional logic here, such as checking the ID's validity
-    document.getElementById("lobby").style.display = "block";
+var dares_json;
+var lobbyId;
+var lobby;
+var lobbies;
+
+function bodyOnload() {
+}
+
+
+function enterLobby() {
+    lobbyId = document.getElementById("lobbyId").value;
+    if (lobbies != null && lobbies[lobbyId] != null) {
+        lobby = lobbies[lobbyId];
+        let usrIndex = 0;
+        for (; usrIndex < 1000; usrIndex++) {
+            if (lobby[usrIndex] == null) {
+                break;
+            }
+        }
+        if (usrIndex == 1000) {
+            // console.log("Couldn't find usrIndex");
+        } else { // success
+            lobby[usrIndex] = {
+                "dares":[],
+                "points":"0"
+            }
+            // console.log("Found usrIndex");
+            document.getElementById("lobby").style.display = "none";
+            document.getElementById("dares").style.display = "block";
+        }
+    }
 }
 function submitText() {
-    var playerId = document.getElementById("playerId").value;
-    var textInput = document.getElementById("textInput").value;
+    let playerId = document.getElementById("playerId").value;
+    let textInput = document.getElementById("textInput").value;
     // Create a JSON object with player ID and submitted text
-    var jsonData = {
-        playerId: playerId,
+    let jsonData = {
+        lobbyId: lobbyId,
         textInput: textInput
     };
     // Convert JSON object to a string
-    var jsonString = JSON.stringify(jsonData);
+    let jsonString = JSON.stringify(jsonData);
     // Simulate sending data to a server or writing to a file
     console.log("JSON Data:", jsonString);
-    // You can send the JSON data to a server using AJAX or fetch API
-    // Example:
-    // fetch('your-server-endpoint', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: jsonString,
-    // })
-    // .then(response => response.json())
-    // .then(data => console.log('Success:', data))
-    // .catch(error => console.error('Error:', error));
 }
+//function 
