@@ -13,9 +13,11 @@ How does it work?
 
 1) Make a catalog of movies, admin selects movie on the laptop [lobby.html]
 2) Generate Transcript of the movie (SubsAI). [movieData.json]
-3) Users input which phrase should be the keyword on the laptop. [lobby.html]
-  *) List recommend phrases for the dare on the laptop, with the frequency listed. 
-4) The Laptop finds out the timestamps of when the keyword is said, creates of list of those timestamps, and determines the total_number_of_keywords [movieData.json]
+3) The Laptop finds out the timestamps of when all words is said, creates a list data = (word, frequency = len(timestamps), timestamps) 
+4) The app chooses a subset of data to create the list recommendedWords, such that the frequency of the recommended words is between 5 and 10. [movieData.json]
+5) Users pick from the list recommendedWords (don't display timestamps) [lobby.html], and their selection is stored in the variables keyWord, keyFrequency, and keyTimestamps. []   
+
+4) 
 5) Each person needs to enter the DareFlix lobby by typing in a specific "Dareflix Lobby ID." [lobbies.json]
 6) Each person can type in a dare on their phones which is sent to the [lobbies.json]
   *) if the person can't think of a dare the app can recommend a dare [ai-dares.json]
