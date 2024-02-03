@@ -1,10 +1,27 @@
-Connect movie API
 
-Movie Selector
-Word Selector
-Dares Selector
-*Users Select Dare Level
-*Dare Recommendation System using ChatGPT
-Sync Dare Timer to Script
-Make Dare Popups
-*Randomly Select Person for Dare
+Problem Statement: Generate a list of dares to go along with a movie during a slumber party
+
+Users:
+Group is on phones
+Admin in on a laptop 
+
+I/O
+Input: Phrase chosen as the keyword, the dares the users input, (*) pictures associated with the dare
+Output: List of dares assigned to a timestamp (hidden from the users), notification telling the users when to do the dare
+
+How does it work?
+
+1) Make a catalog of movies, admin selects movie []
+2) List recommend phrases for when to do the dare, with the frequency listed (Connect movie API). Users input which phrase should be the keyword
+  a) Hidden: Find out the timestamps of when the phrases are said (Connect movie API)
+3) Each person can type in a dare on their phones, if the person can't think of a dare the app can recommend a dare (ChatGPT recommend dares)
+  *) person sends drawing of their dare
+  **) generate a picture using AI of the dare
+4) Compile a list of dares, and assign each dare to a timestamp of the keyword
+5) At the timestamp give a notification to the user that it's time to do the dare
+  *) Randomly Select Person for Dare
+  *) Pause the movie at the timestamp, and display the dare
+
+APIs needed:
+Connect movie API
+ChatGPT recommend dares
