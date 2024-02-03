@@ -1,0 +1,8 @@
+let movieData = [
+    "The Shawshank Redemption",
+    "The Godfather",
+    "The Dark Knight",
+    "Pulp Fiction",
+    "Schindler's List",
+    // Add more movies as needed
+];

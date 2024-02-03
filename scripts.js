@@ -10,6 +10,9 @@ function bodyOnload() {
     // return false;
 }
 
+function bodyOnloadAdmin() {
+    loadMovies();
+}
 
 function enterLobby() {
     lobbyId = document.getElementById("lobbyId").value;
@@ -92,6 +95,33 @@ function invalidLobby() {
     document.getElementById("invalidLobby").style.display="inline";
 }
 
-// function enterDare() {
-
-// }
+function autocompleteMovies() {
+    const input = document.getElementById("movieInput");
+    const iconsContainer = document.getElementById("icons-container");
+    // Clear previous icons
+    iconsContainer.innerHTML = '';
+    // Get input value
+    const inputValue = input.value.toLowerCase();
+    // Filter movies based on input
+    const filteredMovies = movieData.filter(movie => movie.toLowerCase().includes(inputValue));
+    // Display autocomplete suggestions
+    filteredMovies.forEach(movie => {
+        const suggestion = document.createElement("div");
+        suggestion.textContent = movie;
+        suggestion.addEventListener("click", () => {
+            input.value = movie;
+            iconsContainer.innerHTML = '';
+        });
+        iconsContainer.appendChild(suggestion);
+    });
+}
+function handleSpace(event) {
+    if (event.key === " ") {
+        // Add your icon implementation here
+        const iconsContainer = document.getElementById("icons-container");
+        const icon = document.createElement("div");
+        icon.classList.add("icon");
+        icon.textContent = "🎬"; // Placeholder icon, replace as needed
+        iconsContainer.appendChild(icon);
+    }
+}

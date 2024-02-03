@@ -1,6 +1,7 @@
 .body {
     font-family: Arial, sans-serif;
     padding: 20px;
+/*    margin:-8px;*/
 }
 .label {
     display: inline;
@@ -63,4 +64,38 @@
     padding:10px;
     border: 1px solid black;
     border-radius: 10px;
+}
+
+.index a {
+    width:calc(50% - 2px);
+    margin:1px;
+    color:white;
+    font-size:400%;
+/*    padding-top:10%;*/
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color:#898;
+    height: 100%;
+}
+
+.index a:last-child {
+    float:right;
+    background-color:#aba;
+}
+
+#autocomplete-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#icons-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 24px;
 }
