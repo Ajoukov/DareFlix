@@ -4,7 +4,6 @@ Problem Statement: Generate a list of dares to go along with a movie during a sl
 Users:
 1) Phones
 2) Laptop 
-3) Server
 
 I/O
 Input: Phrase chosen as the keyword, the dares the users input, (*) pictures associated with the dare
