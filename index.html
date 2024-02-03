@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Game Lobby</title>
+    <link rel="stylesheet" href="dareflix-styles.css">
+</head>
+<body>
+    <script src="dareflix-scripts.js"></script>
+    <h2>Mobile Game Lobby</h2>
+
+    <form id="gameForm">
+        <label for="playerId">Enter Your ID:</label>
+        <input type="text" id="playerId" name="playerId" required>
+
+        <button type="button" onclick="enterGame()">Enter Game Lobby</button>
+
+        <div id="lobby" style="display:none;">
+            <label for="textInput">Enter Text for JSON:</label>
+            <input type="text" id="textInput" name="textInput" required>
+
+            <button type="button" onclick="submitText()">Submit Text</button>
+        </div>
+    </form>
+
+</body>
+</html>
