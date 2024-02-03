@@ -1,0 +1,10 @@
+Connect movie API
+
+Movie Selector
+Word Selector
+Dares Selector
+*Users Select Dare Level
+*Dare Recommendation System using ChatGPT
+Sync Dare Timer to Script
+Make Dare Popups
+*Randomly Select Person for Dare
