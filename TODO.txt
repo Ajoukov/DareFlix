@@ -11,17 +11,18 @@ Output: List of dares assigned to a timestamp (hidden from the users), notificat
 
 How does it work?
 
-1) Make a catalog of movies, admin selects movie on the laptop
-2) Generate Transcript of the movie (SubsAI). Users input which phrase should be the keyword on the laptop.  (Nick)
-  *) List recommend phrases for the dare on the laptop, with the frequency listed.
-3) The Laptop finds out the timestamps of when the keyword is said, creates of list of those timestamps, and determines the total_number_of_keywords
-4) Each person needs to enter the DareFlix lobby by typing in a specific "Dareflix Lobby ID." Each person can type in a dare on their phones which is sent to the laptop (Sasha)
+1) Make a catalog of movies, admin selects movie on the laptop [lobby.html]
+2) Generate Transcript of the movie (SubsAI). [movie-data.json]
+3) Users input which phrase should be the keyword on the laptop. [lobby.html]
+  *) List recommend phrases for the dare on the laptop, with the frequency listed. []
+4) The Laptop finds out the timestamps of when the keyword is said, creates of list of those timestamps, and determines the total_number_of_keywords [movie-data.json]
+5) Each person needs to enter the DareFlix lobby by typing in a specific "Dareflix Lobby ID." Each person can type in a dare on their phones which is sent to the laptop (Sasha)
   *) if the person can't think of a dare the app can recommend a dare (ChatGPT recommend dares). 
   *) person sends drawing of their dare to the server
   **) generate a picture using AI of the dare
-5) The app will choose total_number_of_keywords of dares from the list of dares submitted, and create list dares.
-6) The app will create a dictionary with the timestamps as the keyword and the dares as the values.
-7) Pause the movie at the timestamp, and display the dare 
+6) The app will choose total_number_of_keywords of dares from the list of dares submitted, and create list dares.
+7) The app will create a dictionary with the timestamps as the keyword and the dares as the values.
+8) Pause the movie at the timestamp, and display the dare 
   *) Randomly Select Person for Dare
   
 
