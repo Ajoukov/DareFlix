@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+</head>
+
+<body>
+
+    <video id="myVideo" width="640" height="360" controls>
+        <source src="Kendrick Lamar - ELEMENT..mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        var video = document.getElementById("myVideo");
+
+        let keyTimestamps = [5, 10, 14];
+
+        let diff = [keyTimestamps[0]];
+
+        for (i = 0; i < keyTimestamps.length - 1; i++) {
+            diff[i + 1] = keyTimestamps[i + 1] - keyTimestamps[i];
+        }
+
+
+
+
+        // Pause the video
+        function pauseVideo() {
+            video.pause();
+        }
+
+        // Play the video
+        function playVideo() {
+            video.play();
+        }
+
+
+        // Open a new pop-up window
+        
+
+
+
+        // Function to handle timeupdate event and pause the video at specified times
+
+        var pauseTimes = [2, 10, 15];
+        var wordIndex = 0;
+
+        function pauseAtSpecificTime() {
+            let currentTime = video.currentTime;
+            console.log(currentTime);
+            if (currentTime >= pauseTimes[wordIndex]) {
+                video.pause();
+                let popup = window.open("darePopup.html", 'Example Popup', 'width=600,height=400');
+                setTimeout(playVideo, 3000);
+                setTimeout(function() {popup.close()},3000);
+                wordIndex++;
+                pauseAtSpecificTime();
+            } else {
+                setTimeout(pauseAtSpecificTime, 200);
+            }
+
+
+        }
+
+
+        let popup = window.open("darePopup.html", 'Example Popup', 'width=600,height=400');
+        let finishedButton;
+        popup.onload = function() {
+            finishedButton = popup.document.querySelector("button");
+            finishedButton.addEventListener("click", function() {
+                popup.close();
+                video.play();
+            });
+
+
+        };
+
+
+
+        video.onloadeddata = function () {
+
+            //playVideo();
+            //pauseAtSpecificTime();
+
+        };
+
+    </script>
+
+
+
+</body>
+
+</html>
