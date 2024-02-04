@@ -10,14 +10,15 @@
 <body>
 
     <video id="myVideo" width="640" height="360" controls>
-        <source src="Kendrick Lamar - ELEMENT..mp4" type="video/mp4">
+        <source src="Baby Driver - Full Movie - Free.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
     <script>
         var video = document.getElementById("myVideo");
 
-        drive 6 
+        //keyWord = "drive"; 
+        //keyFrequency = 6; 
 
 
         let keyTimestamps = [1124, 1294, 2304, 3174, 3358, 4382];
@@ -85,7 +86,6 @@
 
 
         video.onloadeddata = function () {
-            let intro = window.open("darePopup.html", 'Example Popup', 'width=600,height=400');
             playVideo();
             pauseAtSpecificTime();
 
