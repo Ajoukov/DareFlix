@@ -18,14 +18,20 @@
     <script src="scripts.js"></script>
     <script src="lobbies.json"></script>
     <script src="movieData.json"></script>
-    <script src="https://www.dropbox.com/static/api/dropbox-datastores-1.0-latest.js"></script>
-    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="f91ef1yhkiu9qcn"></script>
+
     <h2>DareFlix Admin</h2>
-    <div id="autocomplete-container">
+    <div id="id_giver">
+        <div class="bouncing-text">W97BA8</div>
+        <button class="button centerAlign" onclick="changeToMoviePick()">Begin!</button>
+    </div>
+    <div id="autocomplete-container" style="display:none;">
         <label for="movieInput">Type a movie:</label>
         <input type="text" id="movieInput" oninput="autocompleteMovies()" onkeydown="handleSpace(event)">
-        
+        <button class="button" style="font-size:20px; padding:10px" onclick="changeToMovieViewer()">Enter</button>
         <div id="icons-container"></div>
+    </div>
+    <div id="movieViewer" style="display:none;">
+        ahhhhh
     </div>
 
 </body>

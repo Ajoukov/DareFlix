@@ -13,5 +13,8 @@ let movieData = [
 	},
 	{
 		"Name":"Schindler's List"
+	},
+	{
+		"Name":"Baby Driver"
 	}
 ];
