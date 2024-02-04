@@ -122,3 +122,34 @@ function handleSpace(event) {
     }
 }
 
+
+function Pinger_ping(ip, callback) {
+
+  if(!this.inUse) {
+
+    this.inUse = true;
+    this.callback = callback
+    this.ip = ip;
+
+    var _that = this;
+
+    this.img = new Image();
+
+    this.img.onload = function() {alert("b");};
+    this.img.onerror = function() {alert("a");};
+
+    this.start = new Date().getTime();
+    this.img.src = "http://" + ip;
+    this.timer = setTimeout(function() {alert("c");}, 1500);
+
+  }
+}
+
+function get() {
+    let xhr = (window.XMLHttpRequest) ? new XMLHttpRequest() : new activeXObject("Microsoft.XMLHTTP");
+    xhr.onstatechange = function () {
+        alert("DONE");
+    }
+    xhr.open('GET', '/home/ubuntu/file.txt', true);
+    xhr.send("A");
+}
