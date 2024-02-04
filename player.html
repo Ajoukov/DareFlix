@@ -17,13 +17,12 @@
     <script>
         var video = document.getElementById("myVideo");
 
-        let keyTimestamps = [5, 10, 14];
+        drive 6 
 
-        let diff = [keyTimestamps[0]];
 
-        for (i = 0; i < keyTimestamps.length - 1; i++) {
-            diff[i + 1] = keyTimestamps[i + 1] - keyTimestamps[i];
-        }
+        let keyTimestamps = [1124, 1294, 2304, 3174, 3358, 4382];
+
+
 
 
 
@@ -46,24 +45,23 @@
 
         // Function to handle timeupdate event and pause the video at specified times
 
-        let pauseTimes = [2, 10, 15];
+        
+        let pauseTimes = keyTimestamps;
         let index = 0;
         let listOfDares = ["fuck you", "fuck me", "fuck us all"];
 
         function pauseAtSpecificTime() {
             let currentTime = video.currentTime;
-            console.log("Hi");
-            console.log(index);
+
             if (currentTime >= pauseTimes[index]) {
                 video.pause();
-                let popup = window.open("darePopup.html", 'Example Popup', 'width=600,height=400');
+                let darePopup = window.open("darePopup.html", 'Dare Popup', 'width=600,height=400');
                 let finishedButton;
-                popup.onload = function () {
-                    popup.document.getElementById("dare").innerHTML = listOfDares[index];
-                    console.log(index);
-                    finishedButton = popup.document.querySelector("button");
+                darePopup.onload = function () {
+                    darePopup.document.getElementById("dare").innerHTML = listOfDares[index];
+                    finishedButton = darePopup.document.querySelector("button");
                     finishedButton.addEventListener("click", function () {
-                        popup.close();
+                        darePopup.close();
                         video.play();
                         index++;
                         pauseAtSpecificTime();
@@ -87,7 +85,7 @@
 
 
         video.onloadeddata = function () {
-
+            let intro = window.open("darePopup.html", 'Example Popup', 'width=600,height=400');
             playVideo();
             pauseAtSpecificTime();
 
