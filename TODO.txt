@@ -1,4 +1,3 @@
-c
 Problem Statement: Generate a list of dares to go along with a movie during a slumber party
 
 Users:
