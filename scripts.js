@@ -15,7 +15,8 @@ function bodyOnloadAdmin() {
 }
 
 function enterLobby() {
-    lobbyId = document.getElementById("lobbyId").value;
+    // lobbyId = document.getElementById("lobbyId").value;
+    lobbyId = "W97BA8";
     if (lobbies == null || lobbies[lobbyId] == null) {
         invalidLobby();
         return false;
@@ -83,12 +84,15 @@ function addDare(addButton, index) {
 }
 
 function submitDares() {
-    let xhr = (window.XMLHttpRequest) ? new XMLHttpRequest() : new activeXObject("Microsoft.XMLHTTP");
-    xhr.onstatechange = function () {
-        alert("DONE");
-    }
-    xhr.open('POST', '/json_handler', true);
-    xhr.send(lobbies);
+    // let xhr = (window.XMLHttpRequest) ? new XMLHttpRequest() : new activeXObject("Microsoft.XMLHTTP");
+    // xhr.onstatechange = function () {
+    //     alert("DONE");
+    // }
+    // xhr.open('POST', '/json_handler', true);
+    // xhr.send(lobbies);
+    document.getElementById("dares").style.display="none";
+    document.getElementById("done").style.display="block";
+
 }
 
 function invalidLobby() {
