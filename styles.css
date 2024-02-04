@@ -148,6 +148,10 @@ h2 {
   }
 }
 
+.body2 {
+    background-color: black;
+}
+
 .bouncing-text {
   margin-left: auto;
   margin-right: auto;
