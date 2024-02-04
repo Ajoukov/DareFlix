@@ -40,51 +40,56 @@
 
 
         // Open a new pop-up window
-        
+
 
 
 
         // Function to handle timeupdate event and pause the video at specified times
 
-        var pauseTimes = [2, 10, 15];
-        var wordIndex = 0;
+        let pauseTimes = [2, 10, 15];
+        let index = 0;
+        let listOfDares = ["fuck you", "fuck me", "fuck us all"];
 
         function pauseAtSpecificTime() {
             let currentTime = video.currentTime;
-            console.log(currentTime);
-            if (currentTime >= pauseTimes[wordIndex]) {
+            console.log("Hi");
+            console.log(index);
+            if (currentTime >= pauseTimes[index]) {
                 video.pause();
                 let popup = window.open("darePopup.html", 'Example Popup', 'width=600,height=400');
-                setTimeout(playVideo, 3000);
-                setTimeout(function() {popup.close()},3000);
-                wordIndex++;
-                pauseAtSpecificTime();
+                let finishedButton;
+                popup.onload = function () {
+                    popup.document.getElementById("dare").innerHTML = listOfDares[index];
+                    console.log(index);
+                    finishedButton = popup.document.querySelector("button");
+                    finishedButton.addEventListener("click", function () {
+                        popup.close();
+                        video.play();
+                        index++;
+                        pauseAtSpecificTime();
+                    });
+                
+                };
+
             } else {
                 setTimeout(pauseAtSpecificTime, 200);
             }
 
 
         }
+        
+       
+        
 
 
-        let popup = window.open("darePopup.html", 'Example Popup', 'width=600,height=400');
-        let finishedButton;
-        popup.onload = function() {
-            finishedButton = popup.document.querySelector("button");
-            finishedButton.addEventListener("click", function() {
-                popup.close();
-                video.play();
-            });
 
-
-        };
 
 
 
         video.onloadeddata = function () {
 
-            //playVideo();
-            //pauseAtSpecificTime();
+            playVideo();
+            pauseAtSpecificTime();
 
         };
 
