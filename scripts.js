@@ -126,38 +126,6 @@ function handleSpace(event) {
     }
 }
 
-
-function Pinger_ping(ip, callback) {
-
-  if(!this.inUse) {
-
-    this.inUse = true;
-    this.callback = callback
-    this.ip = ip;
-
-    var _that = this;
-
-    this.img = new Image();
-
-    this.img.onload = function() {alert("b");};
-    this.img.onerror = function() {alert("a");};
-
-    this.start = new Date().getTime();
-    this.img.src = "http://" + ip;
-    this.timer = setTimeout(function() {alert("c");}, 1500);
-
-  }
-}
-
-function get() {
-    let xhr = (window.XMLHttpRequest) ? new XMLHttpRequest() : new activeXObject("Microsoft.XMLHTTP");
-    xhr.onstatechange = function () {
-        alert("DONE");
-    }
-    xhr.open('GET', 'https:///home/ubuntu/file.txt', true);
-    xhr.send("A");
-}
-
 function changeToMoviePick() {
     document.getElementById("id_giver").style.display="none";
     document.getElementById("autocomplete-container").style.display="block";
@@ -167,60 +135,6 @@ function changeToMovieViewer() {
     let temp = document.createElement("a");
     temp.href = "player.html";
     temp.click();
-    // document.getElementById("autocomplete-container").style.display="none";
-    // document.getElementById("movieViewer").style.display="block";
-}
-
-
-
-
-//keyWord = "drive"; 
-//keyFrequency = 6; 
-let keyTimestamps = [1124, 1294, 2304, 3174, 3358, 4382];
-// Pause the video
-function pauseVideo() {
-    video.pause();
-}
-// Play the video
-function playVideo() {
-    video.play();
-}
-// Open a new pop-up window
-// Function to handle timeupdate event and pause the video at specified times
-
-let pauseTimes = keyTimestamps;
-let index = 0;
-let listOfDares =  ["Send a random compliment to the third person in your contact list.", "Go outside to west dining and shout a funny phrase loudly.",
-"FaceTime or call someone of the opposite sex and sing \"Happy Birthday\" to them, regardless of whether it's their birthday or not.",
-"Eat a hot pepper or spicy food item and try not to drink anything for the next 5 minutes.",
-"Call a crush and confess a fake secret admirer story", "Dress up in a silly costume, grab a random object, and give a two-minute performance. Have your friends record it!"];
-function pauseAtSpecificTime() {
-    let currentTime = video.currentTime;
-    console.log(currentTime);
-    if (currentTime >= pauseTimes[index]) {
-        video.pause();
-        let darePopup = window.open("darePopup.html", 'Dare Popup', 'width=600,height=400');
-        let finishedButton;
-        darePopup.onload = function () {
-            darePopup.document.getElementById("dare").innerHTML = listOfDares[index];
-            finishedButton = darePopup.document.querySelector("button");
-            finishedButton.addEventListener("click", function () {
-                darePopup.close();
-                video.play();
-                index++;
-                pauseAtSpecificTime();
-            });
-
-        };
-    } else {
-        setTimeout(pauseAtSpecificTime, 200);
-    }
-}
-
-var video;
-function body2onload() {
-    video = document.getElementById("myVideo");
-    video.onloadeddata = setTimeout(something, 200);
 }
 
 function something() {
