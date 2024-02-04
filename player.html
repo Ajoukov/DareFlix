@@ -59,7 +59,7 @@
             console.log(currentTime);
             if (currentTime >= pauseTimes[index]) {
                 video.pause();
-                let darePopup = window.open("darePopup.html", 'Dare Popup', 'width=600,height=400');
+                let darePopup = window.open("darePopup.html", 'Dare Popup', 'width=800,height=400');
                 let finishedButton;
                 darePopup.onload = function () {
                     darePopup.document.getElementById("dare").innerHTML = listOfDares[index];
