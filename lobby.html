@@ -18,6 +18,7 @@
     <script src="scripts.js"></script>
     <script src="lobbies.json"></script>
     <script src="movieData.json"></script>
+    <script src="wordsData.json"></script>
 
     <h2>DareFlix Admin</h2>
     <div id="id_giver">
@@ -27,13 +28,16 @@
     <div id="autocomplete-container" style="display:none;">
         <label for="movieInput">Type a movie:</label>
         <input type="text" id="movieInput" oninput="autocompleteMovies()" onkeydown="handleSpace(event)">
-        <button class="button" style="font-size:20px; padding:10px" onclick="changeToMovieViewer()">Enter</button>
-        <!-- <a class="button" style="font-size:20px; padding:10px" href="player.html"></button> -->
+        <button class="button" style="font-size:20px; padding:10px" onclick="changeToWordsSelector()">Enter</button>
         <div id="icons-container"></div>
     </div>
-<!--     <div id="movieViewer" style="display:none;">
-        ahhhhh
-    </div> -->
+    <div id="autocomplete-container-words" style="display:none;">
+        <label for="movieInputWords">Type a keyword:</label>
+        <input type="text" id="movieInputWords" oninput="autocompleteWords()" onkeydown="handleSpaceWords(event)">
+        <button class="button" style="font-size:20px; padding:10px" onclick="changeToMovieViewer()">Enter</button>
+        <div id="icons-container-words"></div>        
+    </div>
+
 
 </body>
 </html>

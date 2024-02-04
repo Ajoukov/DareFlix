@@ -100,7 +100,20 @@ h2 {
     font-size: 20px;
 }
 
+#autocomplete-container-words {
+/*    max-width: 600px;
+    margin: 0 auto;*/
+    margin-left:10%;
+    font-size: 20px;
+}
+
 #icons-container {
+    align-items: center;
+    margin-left: 155px;
+    width:70%;
+}
+
+#icons-container-words {
     align-items: center;
     margin-left: 155px;
     width:70%;
@@ -110,13 +123,24 @@ h2 {
     background-color:#aba;
     padding:10px;
 }
+#icons-container-words div {
+    background-color:#aba;
+    padding:10px;
+}
 
 #icons-container div:hover, #icons-container div:nth-child(2n):hover {
     background-color:#676;
     cursor:pointer;
 }
+#icons-container-words div:hover, #icons-container-words div:nth-child(2n):hover {
+    background-color:#676;
+    cursor:pointer;
+}
 
 #icons-container div:nth-child(2n) {
+    background-color:#9a9;
+}
+#icons-container-words div:nth-child(2n) {
     background-color:#9a9;
 }
 
@@ -125,8 +149,17 @@ h2 {
     font-size: 20px;
     padding:10px;
 }
+#movieInputWords {
+    width:68%;
+    font-size: 20px;
+    padding:10px;
+}
 
 #autocomplete-container label {
+    width:150px;
+    display:inline-block;
+}
+#autocomplete-container-words label {
     width:150px;
     display:inline-block;
 }

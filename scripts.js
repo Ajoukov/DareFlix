@@ -115,6 +115,24 @@ function autocompleteMovies() {
         iconsContainer.appendChild(suggestion);
     });
 }
+
+function autocompleteWords() {
+    const input = document.getElementById("movieInputWords");
+    const iconsContainer = document.getElementById("icons-container-words");
+    iconsContainer.innerHTML = "";
+    const inputValue = input.value.toLowerCase();
+    const filteredMovies = wordsData.filter(movie => movie["Name"].toLowerCase().includes(inputValue));
+    filteredMovies.forEach(movie => {
+        const suggestion = document.createElement("div");
+        suggestion.textContent = movie["Name"];
+        suggestion.addEventListener("click", () => {
+            input.value = movie["Name"];
+            iconsContainer.innerHTML = "";
+        });
+        iconsContainer.appendChild(suggestion);
+    });
+}
+
 function handleSpace(event) {
     if (event.key === " ") {
         // Add your icon implementation here
@@ -125,10 +143,25 @@ function handleSpace(event) {
         iconsContainer.appendChild(icon);
     }
 }
+function handleSpaceWords(event) {
+    if (event.key === " ") {
+        // Add your icon implementation here
+        const iconsContainer = document.getElementById("icons-container-words");
+        const icon = document.createElement("div");
+        icon.classList.add("icon");
+        icon.textContent = "🎬"; // Placeholder icon, replace as needed
+        iconsContainer.appendChild(icon);
+    }
+}
 
 function changeToMoviePick() {
     document.getElementById("id_giver").style.display="none";
     document.getElementById("autocomplete-container").style.display="block";
+}
+
+function changeToWordsSelector() {
+    document.getElementById("autocomplete-container").style.display="none";
+    document.getElementById("autocomplete-container-words").style.display="block";
 }
 
 function changeToMovieViewer() {
