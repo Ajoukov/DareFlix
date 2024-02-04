@@ -10,21 +10,28 @@ Output: List of dares assigned to a timestamp (hidden from the users), notificat
 
 How does it work?
 
+Nick
+
 1) Make a catalog of movies, admin selects movie on the laptop [lobby.html]
 2) Generate Transcript of the movie (SubsAI). [movieData.json]
 3) The Laptop finds out the timestamps of when all words is said, creates a list data = (word, frequency = len(timestamps), timestamps) 
 4) The app chooses a subset of data to create the list recommendedWords, such that the frequency of the recommended words is between 5 and 10. [movieData.json]
 5) Users pick from the list recommendedWords (don't display timestamps) [lobby.html], and their selection is stored in the variables keyWord, keyFrequency, and keyTimestamps. []   
 
-4) 
-5) Each person needs to enter the DareFlix lobby by typing in a specific "Dareflix Lobby ID." [lobbies.json]
-6) Each person can type in a dare on their phones which is sent to the [lobbies.json]
+Sasha
+
+6) Each person needs to enter the DareFlix lobby by typing in a specific "Dareflix Lobby ID." [lobbies.json]
+7) Each person can type in a dare on their phones which is sent to the [lobbies.json]
   *) if the person can't think of a dare the app can recommend a dare [ai-dares.json]
   *) person sends drawing of their dare to the server
   **) generate a picture using AI of the dare
-6) The app will choose total_number_of_keywords of dares from the list of dares submitted, and create list dares. [lobbies.json]
-7) The app will create a dictionary with the timestamps as the keyword and the dares as the values. [lobbies.json]
-8) Pause the movie at the timestamp, and display the dare [?]
+8) The app will choose total_number_of_keywords of dares from the list of dares submitted, and create list dares. [lobbies.json]
+9) The app will create a dictionary with the timestamps as the keyword and the dares as the values. [lobbies.json]
+
+
+Ashish
+
+10) Pause the movie at the timestamp, and display the dare [?]
   *) Randomly Select Person for Dare
   
 
