@@ -8,7 +8,7 @@ for i in curr["captions"]:
     
     startTime = i["startTime"]
     startTime = startTime.split(":")
-    time = int(startTime[0])*3600+int(startTime[1])*60+int(float(startTime[2]))
+    time = int(startTime[0])*3600+int(startTime[1])*60+float(startTime[2])
 
     for j in content.split():
         j = "".join(x for x in j if x.isalpha() or x =="'")
