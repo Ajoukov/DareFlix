@@ -1,0 +1,20 @@
+var wordsData = [
+	{
+		"Name":"Driver"
+	},
+	{
+		"Name":"Hello"
+	},
+	{
+		"Name":"Damn"
+	},
+	{
+		"Name":"Died"
+	},
+	{
+		"Name":"Bats"
+	},
+	{
+		"Name":"Police"
+	}
+];
